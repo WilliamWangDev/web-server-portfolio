@@ -33,3 +33,7 @@ http://localhost:3000/index.html
 - **Load Balancing with HAProxy**: 
 
     Install and configure HAProxy to distribute traffic between at least two Nginx instances.
+
+- **Report** 
+
+- **Video** 

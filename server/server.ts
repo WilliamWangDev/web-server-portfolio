@@ -103,15 +103,79 @@ app.get("/auth/login", (req: Request, res: Response) => {
 
   app.get("/edit", ensureAuthenticated, (req: Request, res: Response) => {
     res.send(`
-      <h1>Edit Page</h1>
-      <form method="POST" action="/api/projects/add">
-        <label>Title: <input name="title" /></label><br/>
-        <label>Description: <input name="description" /></label><br/>
-        <button type="submit">Add Project</button>
-      </form>
-      <p><a href="/">Back to Portfolio</a></p>
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <title>Edit Projects</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+        <style>
+          body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #FAFAFA;
+            color: #202124;
+            padding: 2rem;
+          }
+          h1 {
+            color: #4285F4;
+          }
+          form {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 500px;
+          }
+          label {
+            display: block;
+            margin-top: 1rem;
+            font-weight: bold;
+          }
+          input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.25rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          }
+          button {
+            margin-top: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: #4285F4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+          button:hover {
+            background-color: #3367D6;
+          }
+          a {
+            display: inline-block;
+            margin-top: 1rem;
+            text-decoration: none;
+            color: #4285F4;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>Edit Projects</h1>
+        <form method="POST" action="/api/projects/add">
+          <label for="title">Project Title</label>
+          <input id="title" name="title" type="text" required />
+  
+          <label for="description">Description</label>
+          <input id="description" name="description" type="text" required />
+  
+          <button type="submit">Add Project</button>
+        </form>
+        <a href="/index.html">← Back to Portfolio</a>
+      </body>
+      </html>
     `);
   });
+  
   
   app.use(express.urlencoded({ extended: true }));
 

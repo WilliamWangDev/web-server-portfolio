@@ -25,7 +25,7 @@ cd server
 npx ts-node server.ts
 ```
 
-## Then open your browser at:
+### Then open your browser at:
 ```bash
 http://localhost:3000/index.html
 ```

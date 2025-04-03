@@ -1,2 +1,31 @@
-# web-server-portfolio
-for project2
+# Web-Server-Portfolio
+
+### Clone this repo
+```bash
+git clone https://github.com/WilliamWangDev/web-server-portfolio.git
+
+cd web-server-portfolio
+```
+### Install backend dependencies
+```bash
+cd server
+npm install
+```
+
+### Compile Frontend TypeScript
+ From the **project root** (i.e., `web-server-portfolio/`)
+```bash
+tsc --project tsconfig.frontend.json
+```
+
+### Run the App Locally
+From the `/server` directory:
+```bash
+cd server
+npx ts-node server.ts
+```
+
+## Then open your browser at:
+```bash
+http://localhost:3000/index.html
+```

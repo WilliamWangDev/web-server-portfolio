@@ -29,3 +29,7 @@ npx ts-node server.ts
 ```bash
 http://localhost:3000/index.html
 ```
+## TODO
+- **Load Balancing with HAProxy**: 
+
+    Install and configure HAProxy to distribute traffic between at least two Nginx instances.

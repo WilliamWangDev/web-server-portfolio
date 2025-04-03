@@ -1,5 +1,23 @@
 {
   "devDependencies": {
-    "typescript": "^5.8.2"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "undici-types": "^7.7.0"
+  },
+  "name": "web-server-portfolio",
+  "version": "1.0.0",
+  "description": "for project2",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.0",
+    "express": "^5.1.0",
+    "google-auth-library": "^9.15.1"
   }
 }

@@ -6,3 +6,22 @@ export function initPortfolio(): void {
   // Immediately initialize the portfolio on load
   initPortfolio();
   
+  async function loadProjects(): Promise<void> {
+    const response = await fetch("/api/projects");
+    const projects = await response.json();
+  
+    const container = document.getElementById("projects");
+    if (!container) return;
+  
+    const list = document.createElement("ul");
+    for (const project of projects) {
+      const item = document.createElement("li");
+      item.innerText = `${project.title}: ${project.description}`;
+      list.appendChild(item);
+    }
+  
+    container.appendChild(list);
+  }
+  
+  loadProjects();
+  
